@@ -1,0 +1,132 @@
+
+\documentclass[a4paper,11pt,openright]{report} 
+
+\usepackage{pdflscape}
+\usepackage{longtable}  % some tables need many pages...
+\usepackage{ctable}
+\usepackage{amsmath,amssymb}
+\usepackage[round]{natbib}
+
+% The hyperref package is a must while editing.  It provides urls
+% inside your document; you can then click to go to certain pages,
+% figures or bibliography entries.
+%
+% DEFINE CUSTOM COLORS
+% change these to black if you want your citations and links nice and plain
+\newcommand{\citecolor}{black}%{orange}
+\newcommand{\linkcolor}{black}%{red}
+\newcommand{\urlcolor}{black}%{blue}
+\newcommand{\objectcolor}{black}%{gray}
+%
+\usepackage[hyperref,x11names]{xcolor}
+\usepackage[unicode,pageanchor,colorlinks=true,plainpages=false,pdfpagelabels,pdftex]{hyperref}
+\hypersetup{
+  citebordercolor=\citecolor,%
+  linkbordercolor=\linkcolor,%
+  urlbordercolor=\urlcolor,%
+  citecolor=\citecolor,%
+  linkcolor=\linkcolor,%
+  urlcolor=\urlcolor%
+}
+
+% New commands for TNOs and other such things
+\newcommand{\kbo}{\textsc{kbo}\ }
+\newcommand{\tno}{\textsc{tno}\ }
+\newcommand{\kbos}{\textsc{kbo}s}
+\newcommand{\tnos}{\textsc{tno}s}
+\newcommand{\sdos}{\textsc{sdo}s}
+\newcommand{\au}{\textsc{au}\ }
+
+
+\begin{document}
+
+\begin{landscape}
+\ctable[caption={\tno surveys through 2000},label=table:surveys1990,doinside=\small \setlength{\extrarowheight}{0pt}
+,captionskip=0pt]{llr@{.}lr@{.}ll}
+{\tnote{Expanded from \citet{Kavelaars:ws} and \citet{Brown:1998p3926}. Facility refers to telescope name/aperture and dimensions of CCD array of camera. Survey limiting magnitude is normally given at $m_{50}$, the magnitude at which the detection efficiency of \tnos\ drops to 50\%.}
+}{
+\toprule[2pt]
+Survey (if named)	& Facility 		& \multicolumn{2}{l}{Area (deg$^{2}$)}	& \multicolumn{2}{l}{$m_{50}$} 	& Reference \\
+\midrule
+Baker-Nunn		& APT 0.5		& 1428&0				& 18&8			& \citet{Sheppard:2000p592} \\
+EROS-2			& La Silla 1.5	& 30&0				& $\sim19$&0 $I$	& P. Tisserand (pers. comm.) \\
+QUEST			& Llano del Hato 1.0	 & 66&8			& 20&0			& \citet{Rabinowitz:2000p2021} \\ 
+sKBO			& CFHT/12K	& 20&2				& 23&7 			& \citet{Trujillo:2000kk} \\
+sKBO			& UH 2.2/8K	& 51&5				& 22&5			& \citet{Trujillo:2000kk}\\
+				& KECK/LRIS	& 0&01				& 27&9			& \citet{ChiangBrown99} \\
+				& SSO 40''	& 12&0				& 21&0			& \citet{Brown:1998p3926} \\
+JL Deep			& Keck		& 0&3				& 26&3			& \citet{1998ApJ...502L..91L} \\
+				& CFHT/UH8k	& 51&5				& 23&4			& \citet{Gladman:1998dy} \\
+				& Palomar 5 	& 0&049				& 25&6			& \citet{Gladman:1998dy} \\
+				& Palomar 5	& 0&075				& 25&0			& \citet{Gladman:1998dy} \\
+				& CFHT/UH8k	& 51&5				& 22&5 VR		& \citet{Jewitt:1998p2306} \\
+Pluto-Express		& CFHT/12k	& 2&22				& 23&1			& \citet{Trujillo:1998ia} \\
+MKCT			& UH 2.2		& 3&9				& 24&2			& \citet{Jewitt:1996jv} \\
+MKCT			& CTIO 1.5	& 4&4				& 23&2			& \citet{Jewitt:1996jv} \\
+				& HST/WFPC2 	& 0&001				& 27&9			& \citet{Cochran:1995ik, Brown:1997dt, Cochran:1998ey} \\
+				& WHT		& 0&7				& 23&5			& \citet{1995AJ....110.3082I} \\
+				& UH 2.2		& 1&2				& 24&8 			& \citet{Jewitt:1993p2945,1995AJ....109.1867J} \\
+				& INT 2.5		& 0&7				& 22&5			& \citet{Williams:1995ig} \\
+unpublished		& McDonald 2.7 & \multicolumn{2}{l}{unknown} & \multicolumn{2}{l}{unknown} 		& \citet{Cochran:1991tt} \\				
+				& Flagstaff 40''	& 4&9				& 21&0			& \citet{Levison:1990p3239} \\ % limit per \citet{Brown:1998p3926}
+				& KPNO 1.3	& 0&338				& 24&0			& \citet{Luu:1988p2993} \\
+				& KPNO 0.6/CTIO 0.9/plate & 297&0		& 19&5			& \citet{Luu:1988p2993} \\
+unpublished		& unreported	& 0&01				& 24&9			& \citet{Tyson:wz} \\
+				& Palomar 48''/plate & \multicolumn{2}{l}{6400}	& 18&5	& \citet{Kowal:1989bd} \\%Blink comparator \\
+				& Lowell 13''/plate	& \multicolumn{2}{l}{1530}	& 18&0?	& \citet{Tombaugh:1961p3095} \\
+				& Lowell 13''/plate	& \multicolumn{2}{l}{30000}	& 16&8?	& \citet{Tombaugh:1946p664, Tombaugh:1961p3095} \\
+				& 26'' USNO refractor/eye	& \multicolumn{2}{l}{100}	& 10&0?	& \citet{Todd:1880bo} \\
+\bottomrule[2pt]
+}
+
+% Need to add the occultation surveys into this. Would be preferable.
+
+\ctable[caption={\tno surveys from 2001 up to June 2014},label=table:surveys,doinside=\small \setlength{\extrarowheight}{0pt}
+,captionskip=0pt]{llr@{.}lr@{.}ll}
+{\tnote{Updated/expanded from \citet{Kavelaars:ws} and \citet{Brown:1998p3926}, excluding occultation surveys, whose discoveries are inherently irretrievable. Facility refers to telescope name/aperture and dimensions of CCD array of camera. Survey limiting magnitude is normally given at $m_{50}$, the magnitude at which the detection efficiency of \tnos\ drops to 50\%.}
+}{
+\toprule[2pt]
+Survey (if named)	& Facility 		& \multicolumn{2}{l}{Area (deg$^{2}$)}	& \multicolumn{2}{l}{$m_{50}$} 	& Reference \\
+\midrule
+%OSSOS			& CFHT		& 42&0				& 24&5			& \citet{2013ASPC..475..243K} \\
+				& CTIO 4.0 DECam & 52&0 			& 24&5			& \citet{Trujillo:2014ih} \\
+				& CFHT		& 32&0				& 24&6			& M. Alexandersen (pers. comm.) \\
+Siding Spring 		 & Uppsala 0.5	& 6275&0				& 19&0			& \citet{Bannister:2013tn} \\				
+LSQKBO			& La Silla 1.0	& \multicolumn{2}{l}{$\sim7500$}			& 21&5			& \citet{Rabinowitz:2012eq} \\
+OCKS			& Las Campanas 1.3 & \multicolumn{2}{l}{$\sim2500$}		& 21&6			& \citet{2011AJ....142...98S} \\
+				& HST/ACS	& 1&83				& 26&43			& \citet{Fuentes:2011bb} \\ % 5-20 deg off ecliptic. I think I found the right sky area value...
+				& HST/ACS	& 0&45				& 26&1			& \citet{Fuentes:2010gl} \\ % ecliptic
+HELE-CFEPS		& CFHT		& 480&0 				& 23&9 $g'$		& \citet{2008DPS....40.4702K}, J.J. Kavelaars (pers. comm.) \\
+CFEPS			& CFHT		& 321&0				& 23&5--24.4 $g$	& \citet{2009AJ....137.4917K, Petit:2011p3938} \\
+PDSSS			& Palomar 1.2	& 11786&	0			& 21&3			& \citet{Schwamb:2009p844, Schwamb:2010p932} \\
+				& Subaru/Suprime & 0&26			& 26&8			& \citet{Fuentes:2009db} \\
+SDSS Stripe 82	& Sloan		& 300&0				& 22&6 r			& unpublished; cf. \citet{Kaib:2009en} \\
+				& Subaru/Suprime & 0&3				& 26&8			& \citet{Fraser:2009im} \\
+				& Subaru/Suprime & 2&8				& 25&7			& \citet{Fuentes:2008dsa} \\
+				& CFHT/Blanco	 & 3&0				& 26&4			& \citet{Fraser:2008p103} \\
+ESSENCE		& CTIO Blanco	& 11&52				& 23&7			& \citet{2008ApJ...682L..53B} \\
+Spacewatch		& KPNO 0.9	& 7790&6				& 21&0 (rate dependent)	& \citet{Larsen:2007fd} \\
+Irregular Satellites	& CFHT/12K	& 11&85			      	& 24&0			& \citet{Petit:2006gd} \\
+DSS NGS-POSS I	& Palomar 1.2	& 4992&0				& \multicolumn{2}{l}{?}	& \citet{Rhoads:2005tia} \\  % can't access the full thesis to see sensitivity
+DES				& KPNO/CTIO 4.0 & 550&	0			& 22&0			& \citet{2002AJ....123.2083M, Elliot:2005ju} \\
+				& HST/ACS	& 0&02				& 28&5			& \citet{Bernstein:2004p75,Bernstein:2006p138} \\
+Caltech Wide Area	& Palomar 1.2	& 19389&0			& 20&5			& \citet{Trujillo:2003p584, Brown:2008tp} \\
+SEKS			& Mt Stromlo 1.3 & 2900&0	 		& 19&5			& \citet{Moody:2003p352, Moody:2004us} \\
+				& La Silla	2.2	& 18&5				& 23&0?			& \citet{Delsanti:2003tn} \\
+				& KPNO		& 2&3				& 24&9--25.4		& \citet{Allen:2002ko} \\
+				& CTIO		& 1&50				& 25&5			& \citet{Allen:2001dg} \\
+SDSS			& Sloan 		& 100&0				& 21&5			& \citet{Ivezic:2001ct} \\
+KPNO-Large		& KPNO 0.9/Mosaic & 164&0			& 21&1			& \citet{Trujillo:2001ch} \\
+				& CFHT/UT1	& 0&31				& 25&93			& \citet{Gladman:2001p900} \\
+CFHT			& CFHT		& 73&0				& 23&7			& \citet{Trujillo:2001hg} \\
+Spacewatch 		& KPNO 0.9	& 1483&5				& 21&5			& \citet{Larsen:2001dd} \\
+\bottomrule[2pt]
+}
+\end{landscape}
+
+\renewcommand{\bibname}{References}
+% change bib style to 'apj' to remove the ADS links in the printed version
+\bibliographystyle{astroads} 
+\bibliography{references}
+
+\end{document}
